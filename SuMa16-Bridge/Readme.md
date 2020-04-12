@@ -1,10 +1,10 @@
-#SuMa 16 Bridge
+# SuMa 16 Bridge
 
 ## Bridge
 
 Bridge suunnittelumallia voisi hyödyntää piirto-ohjelmassa.
 
-###Roolit
+### Roolit
 - Canvas sisältää implementor olion (Window)
 - Page tarkentaa abstraktiota (IconWindow)
 - Drawable määrittelee rajapinnan toteuttajaluokille (WindowImp)
