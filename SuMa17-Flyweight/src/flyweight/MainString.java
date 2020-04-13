@@ -2,8 +2,8 @@ package flyweight;
 
 public class MainString {
 	public static void main(String[] args) {
-      String fly = "fly", weight = "weight";
-      String fly2 = "fly", weight2 = "weight"; 
+      String fly = "fly", weight = "weight", fly2 = "fly", weight2 = "weight"; 
+
       System.out.println(fly == fly2);       // fly and fly2 refer to the same String instance
       System.out.println(weight == weight2); // weight and weight2 also refer to
                                              // the same String instance
