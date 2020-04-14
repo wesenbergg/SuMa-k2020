@@ -9,16 +9,11 @@ public class Arvuuttaja {
 	private Arvuuttaja() {}
 	
 	public void liityPeliin(Arvuri arvuri) {
-		Memento memento = new Memento(rand.nextInt(10) + 1);
-		arvuri.setMemento(memento);
+		arvuri.setMemento(new Memento(rand.nextInt(10) + 1));
 	}
 
-	public boolean tarkistaArvaus(Object obj, int arvaus) {
-		try {
-			Memento memento = (Memento) obj;
-			return (memento.getLuku() == arvaus);
-		} catch(ClassCastException e) { System.out.println(e); }
-		return false;
+	public boolean tarkistaArvaus(Memento memento, int arvaus) {
+		return (memento.luku == arvaus);
 	}
 	
 	static synchronized Arvuuttaja getInstance() {
@@ -27,15 +22,11 @@ public class Arvuuttaja {
 	}
 	
 	//Memento on Arvuuttajan sisäluokka
-	private class Memento {
+	public class Memento {
 		private int luku;
 
-		public Memento(int luku) {
+		private Memento(int luku) {
 			this.luku = luku;
-		}
-		
-		public int getLuku() {
-			return luku;
 		}
 	}
 }

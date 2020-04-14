@@ -1,19 +1,21 @@
 package memento;
 
+import memento.Arvuuttaja.Memento;
+
 public class Arvuri implements Runnable {
-	private Object obj;
+	private Memento memento;
 	private String name;
 	
 	public Arvuri(String name) {
 		this.name = name;
 	}
 	
-	public void setMemento(Object memento) {
-		this.obj = memento;
+	public void setMemento(Memento memento) {
+		this.memento = memento;
 	}
 	
 	private boolean teeArvaus(int arvaus) {
-		return Arvuuttaja.getInstance().tarkistaArvaus(obj, arvaus);
+		return Arvuuttaja.getInstance().tarkistaArvaus(memento, arvaus);
 	}
 
 	@Override
