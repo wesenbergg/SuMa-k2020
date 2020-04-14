@@ -3,35 +3,41 @@ package builder;
 import java.util.ArrayList;
 import java.util.List;
 
+import burger.Beef;
+import burger.Buns;
+import burger.BurgerPart;
+import burger.Sauce;
+import burger.Vegetables;
+
 public class KrustyBuilder extends HamburgerBuilder {
-	private List<String> hamburger;
+	private List<BurgerPart> hamburger;
 	
 	@Override
 	public void buildBeef() {
-		hamburger.add("crabby patty with cheese on top");
+		hamburger.add(new Beef());
 	}
 
 	@Override
 	public void buildBuns() {
-		hamburger.add("wheat buns with sesame");
+		hamburger.add(new Buns());
 	}
 
 	@Override
 	public void buildSauce() {
-		hamburger.add("krustys super secret sauce");
+		hamburger.add(new Sauce());
 	}
 
 	@Override
 	public void buildVegetables() {
-		hamburger.add("salad and tomato");
+		hamburger.add(new Vegetables());
 	}
 	
-	public List<String> getHamburger() {
+	public List<BurgerPart> getHamburger() {
 		return hamburger;
 	}
 
 	@Override
 	public void createNewHamburger() {
-		hamburger = new ArrayList<String>();
+		hamburger = new ArrayList<BurgerPart>();
 	}
 }
