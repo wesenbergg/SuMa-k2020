@@ -3,7 +3,7 @@ package builder;
 public class BurgerDirector {
 	private HamburgerBuilder hamburgerBuilder;
 	
-	public void setPizzaBuilder(HamburgerBuilder hb) { hamburgerBuilder = hb; }
+	public void setBurgerBuilder(HamburgerBuilder hb) { hamburgerBuilder = hb; }
 	
 	public Object getHamburger() {
 		try {

@@ -7,11 +7,11 @@ public class Main {
 		HamburgerBuilder kahunaBuilder = new KahunaBuilder();
 		HamburgerBuilder krustyBuilder = new KrustyBuilder();
 		
-		director.setPizzaBuilder(kahunaBuilder);
+		director.setBurgerBuilder(kahunaBuilder);
 		director.buildHamburger();		
 		System.out.println(director.getHamburger());
 		
-		director.setPizzaBuilder(krustyBuilder);
+		director.setBurgerBuilder(krustyBuilder);
 		director.buildHamburger();		
 		System.out.println(director.getHamburger());
 	}
